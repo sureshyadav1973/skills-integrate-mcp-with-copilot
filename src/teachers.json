@@ -1,0 +1,8 @@
+{
+  "teachers": {
+    "teacher.alex": {
+      "salt": "mergington-salt-2026",
+      "password_hash": "0aaf4c4da5f16e363cfda12e4e87c6fee596337830c5f7fa37598e43e09161fa"
+    }
+  }
+}

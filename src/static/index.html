@@ -8,9 +8,40 @@
   </head>
   <body>
     <header>
+      <div class="auth-controls">
+        <button id="teacher-login-toggle" class="small-button" type="button">
+          Teacher Login
+        </button>
+        <button id="teacher-logout" class="small-button hidden" type="button">
+          Logout
+        </button>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <p id="teacher-status" class="teacher-status">Viewing as student</p>
     </header>
+
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Teacher Login</h3>
+        <form id="teacher-login-form">
+          <div class="form-group">
+            <label for="teacher-username">Username:</label>
+            <input type="text" id="teacher-username" required />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Login</button>
+            <button id="teacher-login-cancel" type="button" class="secondary-button">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
@@ -22,7 +53,8 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Register Student (Teachers Only)</h3>
+        <p class="helper-text">Students can view registrations, but only logged-in teachers can update them.</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
